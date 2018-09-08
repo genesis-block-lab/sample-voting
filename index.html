@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Hello World DApp</title>
+  <link href='bootstrap.min.css' rel='stylesheet' type='text/css'>
+  <link href='style.css' rel='stylesheet' type='text/css'>
+</head>
+
+<body class="row">
+  <div class="banner">
+    <h1 class="text-center">Decentralized Voting Application</h1>
+  </div>
+  <div class="container col-margin-top-2">
+    <div id="msg" class="alert alert-warning">
+
+    </div>
+    <div class="text-center" style="margin-top: 30px; margin-bottom: 30px;">
+      <button style="display: none;" id="btn-end-vote" onclick="endVote()" class="btn btn-danger">END VOTE</button>
+    </div>
+    <div style="margin-top: 30px; margin-bottom: 30px;">
+      <div class="col-sm-2 col-xs-12">
+        <label for="">Contract Address</label>
+      </div>
+      <div class="col-sm-8 col-xs-12">
+        <input type="text" class="form-control" id="txt-address">
+      </div>
+      <div class="col-sm-2 col-xs-12">
+        <button onclick="submitContractAddress()" type="button" class="btn btn-primary">Submit</button>
+      </div>
+    </div>
+    <div class="table-responsive">
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th>Candidate</th>
+            <th>Votes</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Hulk</td>
+            <td id="candidate-1"></td>
+          </tr>
+          <tr>
+            <td>Captain</td>
+            <td id="candidate-2"></td>
+          </tr>
+          <tr>
+            <td>Stark</td>
+            <td id="candidate-3"></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="text-right">
+      <button onclick="updateListVote()" class="btn btn-info">Refresh</button>
+    </div>
+    <hr>
+    <div class="row">
+      <div class="col-sm-6">
+        <h2>Vote for your favorite candidate</h2>
+        <div class="form-inline">
+          <div class="form-group">
+            <label for="candidate">Candidate</label>
+            <input type="text" class="form-control" id="candidate-name" placeholder="Ex: Hulk">
+          </div>
+          <button type="submit" class="btn btn-primary" onclick="voteForCandidate()">Vote</button>
+        </div>
+        <br>
+      </div>
+
+      <div class="col-sm-6">
+        <h2>Change vote for candidate</h2>
+        <div class="form-inline">
+          <div class="form-group">
+            <label for="candidate">Candidate</label>
+            <input type="text" class="form-control" id="change-vote-candidate-name" placeholder="Ex: Hulk">
+          </div>
+          <button type="submit" class="btn btn-primary" onclick="changeVote()">Change Vote</button>
+        </div>
+        <br>
+
+      </div>
+    </div>
+  </div>
+</body>
+<script src="jquery-3.1.1.slim.min.js"></script>
+<script src="bootstrap.min.js"></script>
+<script src="config.js"></script>
+<script src="app.js"></script>
+
+</html>
