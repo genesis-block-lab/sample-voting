@@ -25,7 +25,7 @@ npm install -g http-server
 http-server
 ```
 
-#### Practice
+## Practice
 - Serve the static web client in your localhost (use http-server or other methods)
 - Connect MetaMask Ganache (and import account to Metamask by one of private keys in Ganache)
 - Use remix to code: https://remix.ethereum.org/
